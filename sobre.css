@@ -1,0 +1,25 @@
+h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #0A0057;
+}
+
+p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #0A0057;
+}
+
+.programacao {
+    color: #0A0057;
+    font-weight: bold;
+}
+
+.imagem {
+    /* width: 200px; */
