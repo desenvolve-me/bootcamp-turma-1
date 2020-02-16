@@ -2,7 +2,7 @@ h1 {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 36px;
     line-height: 23px;
     color: #0A0057;
 }
@@ -24,6 +24,9 @@ p {
 .bloco{
     border: absolute red 1px;
     background-color: rgba(120, 207,253, 0.2);
+    padding:30px; 
+    display: flex; 
+    justify-content: space-around;
 }
 
 .rodape {
@@ -65,3 +68,13 @@ align-items: center;
 
 color: #0A0057;
 }
+
+.descricao_sobre{
+    flex: 1;
+}
+
+.imagem_descricao{
+    display: flex; 
+    justify-content: center; 
+    flex: 1;
+}}
