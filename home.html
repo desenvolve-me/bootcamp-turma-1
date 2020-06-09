@@ -1,7 +1,16 @@
 <html>
-    <head></head>
+    <head>
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <!-- 
+            JXS
+        Java
+        Script
+        eXtensions --> 
+    </head>
     <body>
-        <section style="display: flex;">
+        <!-- <section style="display: flex;">
             <div style="flex:1; background-color: #0A0057; height: 100vh;">
             
             </div>
@@ -9,6 +18,60 @@
             <div style="display: flex; justify-content: center; align-items: center; flex:1; background: #78CFFD; height: 100vh;">
                 <img width="500px" height="236px" src="https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/White+on+Transparent.png"/>
             </div>
+        </section> -->
+
+        <section id="sessaoCarrouselImagens">
+         
         </section>
+
+        <!-- 
+            <section style="display: flex; justify-content: space-around; padding-top: 80px;">
+            <img width="300px" height="200px" src="https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg"/>
+            <img width="300px" height="200px"  src="https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg"/>
+            <img width="300px" height="200px"  src="https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg"/>
+        </section> 
+        -->
+        <script type="text/babel">
+            //com JS PURO sem react
+            //document.getElementById("sessaoCarrouselImagens").innerHTML = "<h1>oi mundo</h1>";
+            
+            
+            //usando react
+            //recebe dois parametros: componente, onde no html deve renderizar
+         
+            //var componente = <h1>oi</h1>  //JSX
+
+            var nome = "yago"
+
+            var stiloComponente = { display : "flex", justifyContent: "space-around", paddingTop: "80px" }
+            var estiloImagem =  { width: 300, height: 200, border: "6px solid red" }
+
+            function CarroselImagens (props) {
+
+                var imagensTags = props.imagens.map(  (item, key) => <img style={estiloImagem} src={item} /> )
+
+                return ( 
+                    // <div style={stiloComponente}>
+                    //     <img style={estiloImagem} src="https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg"/>
+                    //     <img width="300px" height="200px" src="https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg"/>
+                    //     <img width="300px" height="200px" src="https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg"/>
+                    // </div>
+                    <div style={stiloComponente}>
+                        {imagensTags}
+                    </div>
+                )
+            }
+           
+            ReactDOM.render(                 
+                <CarroselImagens imagens={[
+                    "https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg",
+                    "https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg",
+                    "https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg",
+                    "https://desenvolve-me-bootcamp-recursos.s3-sa-east-1.amazonaws.com/christina-wocintechchat-com-UIqpEPaiHQM-unsplash.jpg"
+                ]} /> , document.getElementById("sessaoCarrouselImagens")
+            )
+ 
+         </script>
+       
     </body>
 </html>
